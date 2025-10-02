@@ -1,0 +1,788 @@
+2025-10-02 10:44:20,354 - __main__ - INFO - Starting Health & Wellbeing data generation process
+2025-10-02 10:44:20,362 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-10-02 10:44:20,420 - __main__ - INFO - Initialized Bedrock client for region: us-east-1
+2025-10-02 10:44:20,420 - __main__ - INFO - Initialized Health & Wellbeing data generator
+2025-10-02 10:44:20,420 - health_wellbeing_generator - INFO - Starting Health & Wellbeing data generation
+2025-10-02 10:44:20,420 - health_wellbeing_generator - INFO - Generating Tier 1 categories
+2025-10-02 10:44:20,420 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:21,031 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:21,032 - health_wellbeing_generator - INFO - Generated and saved 12 Tier 1 categories
+2025-10-02 10:44:21,033 - health_wellbeing_generator - INFO - Generated 12 Tier 1 categories
+2025-10-02 10:44:21,033 - health_wellbeing_generator - INFO - Tier 1 file exists, loading from checkpoint
+2025-10-02 10:44:21,033 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:21,383 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:21,384 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Physical Activity' - 8 items
+2025-10-02 10:44:21,384 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:21,836 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:21,838 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Healthy Eating' - 8 items
+2025-10-02 10:44:21,838 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:22,242 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:22,243 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Mental Wellbeing' - 8 items
+2025-10-02 10:44:22,243 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:22,660 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:22,661 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Sleep Health' - 8 items
+2025-10-02 10:44:22,662 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:23,211 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:23,213 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Stress Management' - 8 items
+2025-10-02 10:44:23,214 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:23,737 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:23,739 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Hydration' - 8 items
+2025-10-02 10:44:23,740 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:24,165 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:24,167 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Social Connections' - 8 items
+2025-10-02 10:44:24,167 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:24,565 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:24,567 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Work-Life Balance' - 8 items
+2025-10-02 10:44:24,568 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:24,998 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:24,999 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Personal Growth' - 8 items
+2025-10-02 10:44:25,000 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:25,466 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:25,468 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Environmental Wellness' - 8 items
+2025-10-02 10:44:25,468 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:25,899 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:25,900 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Preventive Health' - 8 items
+2025-10-02 10:44:25,900 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:26,278 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:26,280 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Mindfulness Practices' - 8 items
+2025-10-02 10:44:26,280 - health_wellbeing_generator - INFO - Generated 96 Tier 2 items
+2025-10-02 10:44:26,280 - health_wellbeing_generator - INFO - Tier 1 file exists, loading from checkpoint
+2025-10-02 10:44:26,281 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Physical Activity', loading from checkpoint
+2025-10-02 10:44:26,281 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Healthy Eating', loading from checkpoint
+2025-10-02 10:44:26,282 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Mental Wellbeing', loading from checkpoint
+2025-10-02 10:44:26,282 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Sleep Health', loading from checkpoint
+2025-10-02 10:44:26,282 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Stress Management', loading from checkpoint
+2025-10-02 10:44:26,282 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Hydration', loading from checkpoint
+2025-10-02 10:44:26,282 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Social Connections', loading from checkpoint
+2025-10-02 10:44:26,283 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Work-Life Balance', loading from checkpoint
+2025-10-02 10:44:26,283 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Personal Growth', loading from checkpoint
+2025-10-02 10:44:26,283 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Environmental Wellness', loading from checkpoint
+2025-10-02 10:44:26,284 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Preventive Health', loading from checkpoint
+2025-10-02 10:44:26,284 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Mindfulness Practices', loading from checkpoint
+2025-10-02 10:44:26,284 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:26,773 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:26,776 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Yoga' - 10 seeds
+2025-10-02 10:44:26,776 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:27,301 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:27,302 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Strength Training' - 10 seeds
+2025-10-02 10:44:27,303 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:27,889 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:27,890 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Cardio' - 10 seeds
+2025-10-02 10:44:27,891 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:28,400 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:28,402 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Walking' - 10 seeds
+2025-10-02 10:44:28,402 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:28,921 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:28,922 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Cycling' - 10 seeds
+2025-10-02 10:44:28,922 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:29,513 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:29,515 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Dancing' - 10 seeds
+2025-10-02 10:44:29,515 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:30,080 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:30,083 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Pilates' - 10 seeds
+2025-10-02 10:44:30,083 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:30,589 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:30,590 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Swimming' - 10 seeds
+2025-10-02 10:44:30,590 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:31,090 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:31,092 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Meal Planning' - 10 seeds
+2025-10-02 10:44:31,092 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:31,649 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:31,650 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Mindful Eating' - 10 seeds
+2025-10-02 10:44:31,650 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:32,152 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:32,155 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Plant-Based Diets' - 10 seeds
+2025-10-02 10:44:32,155 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:32,646 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:32,647 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Hydration Strategies' - 10 seeds
+2025-10-02 10:44:32,647 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:33,173 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:33,174 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Cooking Techniques' - 10 seeds
+2025-10-02 10:44:33,174 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:33,707 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:33,707 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Snacking Smart' - 10 seeds
+2025-10-02 10:44:33,707 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:34,218 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:34,219 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Seasonal Eating' - 10 seeds
+2025-10-02 10:44:34,220 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:34,764 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:34,764 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Food Allergies Awareness' - 9 seeds
+2025-10-02 10:44:34,764 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:35,241 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:35,242 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Mindfulness Meditation' - 10 seeds
+2025-10-02 10:44:35,242 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:35,785 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:35,785 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Journaling' - 10 seeds
+2025-10-02 10:44:35,786 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:36,332 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:36,332 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Nature Walks' - 10 seeds
+2025-10-02 10:44:36,332 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:36,847 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:36,848 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Breathing Exercises' - 10 seeds
+2025-10-02 10:44:36,849 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:37,391 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:37,393 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Progressive Muscle Relaxation' - 10 seeds
+2025-10-02 10:44:37,393 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:37,899 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:37,900 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Art Therapy' - 1 seeds
+2025-10-02 10:44:37,900 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:38,401 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:38,402 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Digital Detox' - 10 seeds
+2025-10-02 10:44:38,402 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:38,911 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:38,911 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Gratitude Practices' - 10 seeds
+2025-10-02 10:44:38,911 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:39,465 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:39,466 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Meditation' - 10 seeds
+2025-10-02 10:44:39,466 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Breathing Exercises', loading from checkpoint
+2025-10-02 10:44:39,466 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:40,014 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:40,015 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Reading Before Bed' - 10 seeds
+2025-10-02 10:44:40,015 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:40,544 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:40,545 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Consistent Sleep Schedule' - 10 seeds
+2025-10-02 10:44:40,545 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindful Eating', loading from checkpoint
+2025-10-02 10:44:40,545 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:41,150 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:41,152 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Nature Exposure' - 9 seeds
+2025-10-02 10:44:41,152 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Digital Detox', loading from checkpoint
+2025-10-02 10:44:41,153 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:41,663 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:41,665 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Relaxation Techniques' - 10 seeds
+2025-10-02 10:44:41,665 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindfulness Meditation', loading from checkpoint
+2025-10-02 10:44:41,666 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:42,182 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:42,183 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Deep Breathing Exercises' - 10 seeds
+2025-10-02 10:44:42,184 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Progressive Muscle Relaxation', loading from checkpoint
+2025-10-02 10:44:42,184 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Nature Walks', loading from checkpoint
+2025-10-02 10:44:42,184 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Journaling', loading from checkpoint
+2025-10-02 10:44:42,184 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Art Therapy', loading from checkpoint
+2025-10-02 10:44:42,184 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:42,706 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:42,707 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Laughter Yoga' - 10 seeds
+2025-10-02 10:44:42,708 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:43,300 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:43,302 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Guided Imagery' - 10 seeds
+2025-10-02 10:44:43,303 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:43,809 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:43,810 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Daily Water Intake Goals' - 9 seeds
+2025-10-02 10:44:43,810 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:44,335 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:44,336 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Hydration Tracking Apps' - 9 seeds
+2025-10-02 10:44:44,336 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:44,794 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:44,797 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Electrolyte Balance' - 10 seeds
+2025-10-02 10:44:44,797 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:45,384 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:45,384 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Hydration Before, During, and After Exercise' - 9 seeds
+2025-10-02 10:44:45,385 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:45,966 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:45,967 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Infused Water Recipes' - 10 seeds
+2025-10-02 10:44:45,967 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:46,594 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:46,595 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Hydration Myths Debunked' - 10 seeds
+2025-10-02 10:44:46,595 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:47,120 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:47,121 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Optimal Water Temperatures' - 10 seeds
+2025-10-02 10:44:47,121 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:47,664 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:47,665 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Hydration for Different Weather Conditions' - 9 seeds
+2025-10-02 10:44:47,665 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:48,259 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:48,262 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Community Volunteering' - 10 seeds
+2025-10-02 10:44:48,262 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:48,776 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:48,778 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Book Clubs' - 10 seeds
+2025-10-02 10:44:48,778 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:49,288 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:49,290 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Online Support Groups' - 10 seeds
+2025-10-02 10:44:49,290 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:49,821 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:49,823 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Local Meetups' - 10 seeds
+2025-10-02 10:44:49,823 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:50,360 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:50,361 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Family Game Nights' - 9 seeds
+2025-10-02 10:44:50,362 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:50,997 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:50,999 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Neighborhood Walks' - 9 seeds
+2025-10-02 10:44:50,999 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:51,557 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:51,557 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Friendship Circles' - 10 seeds
+2025-10-02 10:44:51,558 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:52,107 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:52,108 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Social Cooking Classes' - 10 seeds
+2025-10-02 10:44:52,108 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindfulness Meditation', loading from checkpoint
+2025-10-02 10:44:52,109 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:52,611 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:52,614 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Time Management Techniques' - 10 seeds
+2025-10-02 10:44:52,614 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:53,140 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:53,140 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Healthy Eating Habits' - 9 seeds
+2025-10-02 10:44:53,140 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Digital Detox', loading from checkpoint
+2025-10-02 10:44:53,141 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:53,609 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:53,610 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Outdoor Activities' - 10 seeds
+2025-10-02 10:44:53,611 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:54,102 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:54,103 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Volunteering' - 10 seeds
+2025-10-02 10:44:54,103 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:54,669 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:54,671 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Creative Hobbies' - 10 seeds
+2025-10-02 10:44:54,671 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:55,226 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:55,226 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Social Connections' - 10 seeds
+2025-10-02 10:44:55,227 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindfulness Meditation', loading from checkpoint
+2025-10-02 10:44:55,227 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Journaling', loading from checkpoint
+2025-10-02 10:44:55,227 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:55,790 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:55,791 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Goal Setting' - 10 seeds
+2025-10-02 10:44:55,791 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:56,262 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:56,264 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Public Speaking' - 10 seeds
+2025-10-02 10:44:56,264 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:56,790 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:56,791 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Creative Writing' - 9 seeds
+2025-10-02 10:44:56,791 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:57,282 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:57,284 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Time Management' - 6 seeds
+2025-10-02 10:44:57,284 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:57,893 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:57,895 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Learning a New Skill' - 10 seeds
+2025-10-02 10:44:57,896 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Volunteering', loading from checkpoint
+2025-10-02 10:44:57,896 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:58,452 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:58,453 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Sustainable Living Practices' - 10 seeds
+2025-10-02 10:44:58,453 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:59,101 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:59,103 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Eco-Friendly Home Design' - 10 seeds
+2025-10-02 10:44:59,103 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:44:59,708 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:44:59,709 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Green Transportation Choices' - 10 seeds
+2025-10-02 10:44:59,709 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:45:00,196 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:45:00,197 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Waste Reduction Techniques' - 10 seeds
+2025-10-02 10:45:00,198 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:45:00,692 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:45:00,694 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Community Gardening' - 10 seeds
+2025-10-02 10:45:00,694 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:45:01,256 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:45:01,257 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Nature-Based Therapy' - 5 seeds
+2025-10-02 10:45:01,258 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:45:01,815 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:45:01,817 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Water Conservation Methods' - 10 seeds
+2025-10-02 10:45:01,817 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:45:02,379 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:45:02,379 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Air Quality Improvement' - 10 seeds
+2025-10-02 10:45:02,379 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindfulness Meditation', loading from checkpoint
+2025-10-02 10:45:02,380 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:45:02,872 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:45:02,873 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Balance Exercises' - 10 seeds
+2025-10-02 10:45:02,874 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Healthy Eating Habits', loading from checkpoint
+2025-10-02 10:45:02,874 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:45:03,384 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:45:03,385 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Regular Health Screenings' - 10 seeds
+2025-10-02 10:45:03,385 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:45:03,929 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:45:03,930 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Stress Management Techniques' - 9 seeds
+2025-10-02 10:45:03,930 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:45:04,418 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:45:04,419 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Sleep Hygiene Practices' - 9 seeds
+2025-10-02 10:45:04,419 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Hydration Strategies', loading from checkpoint
+2025-10-02 10:45:04,419 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:45:04,946 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:45:04,946 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Sun Protection' - 10 seeds
+2025-10-02 10:45:04,947 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Meditation', loading from checkpoint
+2025-10-02 10:45:04,947 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Breathing Exercises', loading from checkpoint
+2025-10-02 10:45:04,948 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindful Eating', loading from checkpoint
+2025-10-02 10:45:04,948 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:45:05,413 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:45:05,415 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Body Scan' - 10 seeds
+2025-10-02 10:45:05,415 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:45:05,897 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:45:05,897 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Walking Meditation' - 10 seeds
+2025-10-02 10:45:05,897 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:45:06,389 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:45:06,390 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Gratitude Journaling' - 10 seeds
+2025-10-02 10:45:06,391 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:45:06,913 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:45:06,914 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Mindful Listening' - 10 seeds
+2025-10-02 10:45:06,915 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:45:07,540 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:45:07,542 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Mindful Movement' - 10 seeds
+2025-10-02 10:45:07,542 - health_wellbeing_generator - INFO - Generated 920 Tier 3 seeds
+2025-10-02 10:45:07,543 - __main__ - INFO - ============================================================
+2025-10-02 10:45:07,543 - __main__ - INFO - GENERATION COMPLETE - SUMMARY
+2025-10-02 10:45:07,543 - __main__ - INFO - ============================================================
+2025-10-02 10:45:07,543 - __main__ - INFO - Tier 1 categories generated: 12
+2025-10-02 10:45:07,543 - __main__ - INFO - Tier 2 items generated: 96
+2025-10-02 10:45:07,543 - __main__ - INFO - Tier 3 seeds generated: 920
+2025-10-02 10:45:07,543 - __main__ - INFO - No errors encountered
+2025-10-02 10:45:07,543 - __main__ - INFO - Output files saved to: output/
+2025-10-02 10:45:07,544 - __main__ - INFO -   - tier1.json
+2025-10-02 10:45:07,544 - __main__ - INFO -   - tier2_[category].csv files (separate file for each Tier 1 category)
+2025-10-02 10:45:07,544 - __main__ - INFO -   - tier3_[practice].csv files (separate file for each Tier 2 practice)
+2025-10-02 10:45:07,544 - __main__ - INFO - Total items generated: 1028
+2025-10-02 10:45:07,544 - __main__ - INFO - ============================================================
+2025-10-02 10:48:25,384 - __main__ - INFO - Starting Health & Wellbeing data generation process
+2025-10-02 10:48:25,394 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-10-02 10:48:25,453 - __main__ - INFO - Initialized Bedrock client for region: us-east-1
+2025-10-02 10:48:25,453 - __main__ - INFO - Initialized Health & Wellbeing data generator
+2025-10-02 10:48:25,453 - health_wellbeing_generator - INFO - Starting Health & Wellbeing data generation
+2025-10-02 10:48:25,453 - health_wellbeing_generator - INFO - Tier 1 file exists, loading from checkpoint
+2025-10-02 10:48:25,453 - health_wellbeing_generator - INFO - Generated 12 Tier 1 categories
+2025-10-02 10:48:25,453 - health_wellbeing_generator - INFO - Tier 1 file exists, loading from checkpoint
+2025-10-02 10:48:25,453 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Physical Activity', loading from checkpoint
+2025-10-02 10:48:25,453 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Healthy Eating', loading from checkpoint
+2025-10-02 10:48:25,453 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Mental Wellbeing', loading from checkpoint
+2025-10-02 10:48:25,454 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Sleep Health', loading from checkpoint
+2025-10-02 10:48:25,454 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Stress Management', loading from checkpoint
+2025-10-02 10:48:25,454 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Hydration', loading from checkpoint
+2025-10-02 10:48:25,454 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Social Connections', loading from checkpoint
+2025-10-02 10:48:25,454 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Work-Life Balance', loading from checkpoint
+2025-10-02 10:48:25,456 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Personal Growth', loading from checkpoint
+2025-10-02 10:48:25,456 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Environmental Wellness', loading from checkpoint
+2025-10-02 10:48:25,456 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Preventive Health', loading from checkpoint
+2025-10-02 10:48:25,456 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Mindfulness Practices', loading from checkpoint
+2025-10-02 10:48:25,456 - health_wellbeing_generator - INFO - Creating aggregated Tier 2 file with 96 items
+2025-10-02 10:48:25,457 - health_wellbeing_generator - INFO - Aggregated Tier 2 file saved: output/all_tier2.csv
+2025-10-02 10:48:25,457 - health_wellbeing_generator - INFO - Generated 96 Tier 2 items
+2025-10-02 10:48:25,457 - health_wellbeing_generator - INFO - Tier 1 file exists, loading from checkpoint
+2025-10-02 10:48:25,457 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Physical Activity', loading from checkpoint
+2025-10-02 10:48:25,457 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Healthy Eating', loading from checkpoint
+2025-10-02 10:48:25,457 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Mental Wellbeing', loading from checkpoint
+2025-10-02 10:48:25,457 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Sleep Health', loading from checkpoint
+2025-10-02 10:48:25,457 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Stress Management', loading from checkpoint
+2025-10-02 10:48:25,457 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Hydration', loading from checkpoint
+2025-10-02 10:48:25,457 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Social Connections', loading from checkpoint
+2025-10-02 10:48:25,457 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Work-Life Balance', loading from checkpoint
+2025-10-02 10:48:25,457 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Personal Growth', loading from checkpoint
+2025-10-02 10:48:25,457 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Environmental Wellness', loading from checkpoint
+2025-10-02 10:48:25,457 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Preventive Health', loading from checkpoint
+2025-10-02 10:48:25,457 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Mindfulness Practices', loading from checkpoint
+2025-10-02 10:48:25,457 - health_wellbeing_generator - INFO - Creating aggregated Tier 2 file with 96 items
+2025-10-02 10:48:25,458 - health_wellbeing_generator - INFO - Aggregated Tier 2 file saved: output/all_tier2.csv
+2025-10-02 10:48:25,458 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Yoga', loading from checkpoint
+2025-10-02 10:48:25,458 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Strength Training', loading from checkpoint
+2025-10-02 10:48:25,458 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Cardio', loading from checkpoint
+2025-10-02 10:48:25,458 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Walking', loading from checkpoint
+2025-10-02 10:48:25,459 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Cycling', loading from checkpoint
+2025-10-02 10:48:25,460 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Dancing', loading from checkpoint
+2025-10-02 10:48:25,460 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Pilates', loading from checkpoint
+2025-10-02 10:48:25,460 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Swimming', loading from checkpoint
+2025-10-02 10:48:25,461 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Meal Planning', loading from checkpoint
+2025-10-02 10:48:25,461 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindful Eating', loading from checkpoint
+2025-10-02 10:48:25,461 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Plant-Based Diets', loading from checkpoint
+2025-10-02 10:48:25,461 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Hydration Strategies', loading from checkpoint
+2025-10-02 10:48:25,462 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Cooking Techniques', loading from checkpoint
+2025-10-02 10:48:25,463 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Snacking Smart', loading from checkpoint
+2025-10-02 10:48:25,463 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Seasonal Eating', loading from checkpoint
+2025-10-02 10:48:25,463 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Food Allergies Awareness', loading from checkpoint
+2025-10-02 10:48:25,464 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindfulness Meditation', loading from checkpoint
+2025-10-02 10:48:25,464 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Journaling', loading from checkpoint
+2025-10-02 10:48:25,464 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Nature Walks', loading from checkpoint
+2025-10-02 10:48:25,464 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Breathing Exercises', loading from checkpoint
+2025-10-02 10:48:25,464 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Progressive Muscle Relaxation', loading from checkpoint
+2025-10-02 10:48:25,464 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Art Therapy', loading from checkpoint
+2025-10-02 10:48:25,464 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Digital Detox', loading from checkpoint
+2025-10-02 10:48:25,465 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Gratitude Practices', loading from checkpoint
+2025-10-02 10:48:25,466 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Meditation', loading from checkpoint
+2025-10-02 10:48:25,466 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Breathing Exercises', loading from checkpoint
+2025-10-02 10:48:25,466 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Reading Before Bed', loading from checkpoint
+2025-10-02 10:48:25,467 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Consistent Sleep Schedule', loading from checkpoint
+2025-10-02 10:48:25,467 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindful Eating', loading from checkpoint
+2025-10-02 10:48:25,467 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Nature Exposure', loading from checkpoint
+2025-10-02 10:48:25,467 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Digital Detox', loading from checkpoint
+2025-10-02 10:48:25,468 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Relaxation Techniques', loading from checkpoint
+2025-10-02 10:48:25,468 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindfulness Meditation', loading from checkpoint
+2025-10-02 10:48:25,468 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Deep Breathing Exercises', loading from checkpoint
+2025-10-02 10:48:25,468 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Progressive Muscle Relaxation', loading from checkpoint
+2025-10-02 10:48:25,468 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Nature Walks', loading from checkpoint
+2025-10-02 10:48:25,468 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Journaling', loading from checkpoint
+2025-10-02 10:48:25,468 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Art Therapy', loading from checkpoint
+2025-10-02 10:48:25,468 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Laughter Yoga', loading from checkpoint
+2025-10-02 10:48:25,468 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Guided Imagery', loading from checkpoint
+2025-10-02 10:48:25,469 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Daily Water Intake Goals', loading from checkpoint
+2025-10-02 10:48:25,469 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Hydration Tracking Apps', loading from checkpoint
+2025-10-02 10:48:25,470 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Electrolyte Balance', loading from checkpoint
+2025-10-02 10:48:25,471 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Hydration Before, During, and After Exercise', loading from checkpoint
+2025-10-02 10:48:25,471 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Infused Water Recipes', loading from checkpoint
+2025-10-02 10:48:25,471 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Hydration Myths Debunked', loading from checkpoint
+2025-10-02 10:48:25,471 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Optimal Water Temperatures', loading from checkpoint
+2025-10-02 10:48:25,471 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Hydration for Different Weather Conditions', loading from checkpoint
+2025-10-02 10:48:25,471 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Community Volunteering', loading from checkpoint
+2025-10-02 10:48:25,472 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Book Clubs', loading from checkpoint
+2025-10-02 10:48:25,472 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Online Support Groups', loading from checkpoint
+2025-10-02 10:48:25,473 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Local Meetups', loading from checkpoint
+2025-10-02 10:48:25,473 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Family Game Nights', loading from checkpoint
+2025-10-02 10:48:25,474 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Neighborhood Walks', loading from checkpoint
+2025-10-02 10:48:25,474 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Friendship Circles', loading from checkpoint
+2025-10-02 10:48:25,474 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Social Cooking Classes', loading from checkpoint
+2025-10-02 10:48:25,474 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindfulness Meditation', loading from checkpoint
+2025-10-02 10:48:25,474 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Time Management Techniques', loading from checkpoint
+2025-10-02 10:48:25,474 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Healthy Eating Habits', loading from checkpoint
+2025-10-02 10:48:25,475 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Digital Detox', loading from checkpoint
+2025-10-02 10:48:25,476 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Outdoor Activities', loading from checkpoint
+2025-10-02 10:48:25,476 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Volunteering', loading from checkpoint
+2025-10-02 10:48:25,477 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Creative Hobbies', loading from checkpoint
+2025-10-02 10:48:25,477 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Social Connections', loading from checkpoint
+2025-10-02 10:48:25,477 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindfulness Meditation', loading from checkpoint
+2025-10-02 10:48:25,477 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Journaling', loading from checkpoint
+2025-10-02 10:48:25,477 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Goal Setting', loading from checkpoint
+2025-10-02 10:48:25,477 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Public Speaking', loading from checkpoint
+2025-10-02 10:48:25,477 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Creative Writing', loading from checkpoint
+2025-10-02 10:48:25,478 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Time Management', loading from checkpoint
+2025-10-02 10:48:25,478 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Learning a New Skill', loading from checkpoint
+2025-10-02 10:48:25,478 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Volunteering', loading from checkpoint
+2025-10-02 10:48:25,478 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Sustainable Living Practices', loading from checkpoint
+2025-10-02 10:48:25,479 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Eco-Friendly Home Design', loading from checkpoint
+2025-10-02 10:48:25,479 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Green Transportation Choices', loading from checkpoint
+2025-10-02 10:48:25,479 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Waste Reduction Techniques', loading from checkpoint
+2025-10-02 10:48:25,479 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Community Gardening', loading from checkpoint
+2025-10-02 10:48:25,479 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Nature-Based Therapy', loading from checkpoint
+2025-10-02 10:48:25,479 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Water Conservation Methods', loading from checkpoint
+2025-10-02 10:48:25,480 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Air Quality Improvement', loading from checkpoint
+2025-10-02 10:48:25,481 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindfulness Meditation', loading from checkpoint
+2025-10-02 10:48:25,481 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Balance Exercises', loading from checkpoint
+2025-10-02 10:48:25,481 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Healthy Eating Habits', loading from checkpoint
+2025-10-02 10:48:25,481 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Regular Health Screenings', loading from checkpoint
+2025-10-02 10:48:25,481 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Stress Management Techniques', loading from checkpoint
+2025-10-02 10:48:25,481 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Sleep Hygiene Practices', loading from checkpoint
+2025-10-02 10:48:25,481 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Hydration Strategies', loading from checkpoint
+2025-10-02 10:48:25,481 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Sun Protection', loading from checkpoint
+2025-10-02 10:48:25,482 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Meditation', loading from checkpoint
+2025-10-02 10:48:25,482 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Breathing Exercises', loading from checkpoint
+2025-10-02 10:48:25,482 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindful Eating', loading from checkpoint
+2025-10-02 10:48:25,482 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Body Scan', loading from checkpoint
+2025-10-02 10:48:25,482 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Walking Meditation', loading from checkpoint
+2025-10-02 10:48:25,483 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Gratitude Journaling', loading from checkpoint
+2025-10-02 10:48:25,483 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindful Listening', loading from checkpoint
+2025-10-02 10:48:25,483 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindful Movement', loading from checkpoint
+2025-10-02 10:48:25,483 - health_wellbeing_generator - INFO - Creating aggregated Tier 3 file with 920 seeds
+2025-10-02 10:48:25,485 - health_wellbeing_generator - INFO - Aggregated Tier 3 file saved: output/all_tier3.csv
+2025-10-02 10:48:25,485 - health_wellbeing_generator - INFO - Generated 920 Tier 3 seeds
+2025-10-02 10:48:25,485 - __main__ - INFO - ============================================================
+2025-10-02 10:48:25,485 - __main__ - INFO - GENERATION COMPLETE - SUMMARY
+2025-10-02 10:48:25,485 - __main__ - INFO - ============================================================
+2025-10-02 10:48:25,485 - __main__ - INFO - Tier 1 categories generated: 12
+2025-10-02 10:48:25,485 - __main__ - INFO - Tier 2 items generated: 96
+2025-10-02 10:48:25,485 - __main__ - INFO - Tier 3 seeds generated: 920
+2025-10-02 10:48:25,485 - __main__ - INFO - No errors encountered
+2025-10-02 10:48:25,485 - __main__ - INFO - Output files saved to: output/
+2025-10-02 10:48:25,485 - __main__ - INFO -   - tier1.json
+2025-10-02 10:48:25,485 - __main__ - INFO -   - all_tier2.csv (aggregated Tier 2 data)
+2025-10-02 10:48:25,485 - __main__ - INFO -   - tier2_[category].csv files (separate file for each Tier 1 category)
+2025-10-02 10:48:25,485 - __main__ - INFO -   - all_tier3.csv (aggregated Tier 3 data)
+2025-10-02 10:48:25,485 - __main__ - INFO -   - tier3_[practice].csv files (separate file for each Tier 2 practice)
+2025-10-02 10:48:25,485 - __main__ - INFO - Total items generated: 1028
+2025-10-02 10:48:25,485 - __main__ - INFO - ============================================================
+2025-10-02 10:52:55,742 - __main__ - INFO - Starting Health & Wellbeing data generation process
+2025-10-02 10:52:55,753 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-10-02 10:52:55,812 - __main__ - INFO - Initialized Bedrock client for region: us-east-1
+2025-10-02 10:52:55,813 - __main__ - INFO - Initialized Health & Wellbeing data generator
+2025-10-02 10:52:55,813 - health_wellbeing_generator - INFO - Starting Health & Wellbeing data generation
+2025-10-02 10:52:55,813 - health_wellbeing_generator - INFO - Tier 1 file exists, loading from checkpoint
+2025-10-02 10:52:55,813 - health_wellbeing_generator - INFO - Generated 20 Tier 1 categories
+2025-10-02 10:52:55,813 - health_wellbeing_generator - INFO - Tier 1 file exists, loading from checkpoint
+2025-10-02 10:52:55,813 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Physical Activity', loading from checkpoint
+2025-10-02 10:52:55,813 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Healthy Eating', loading from checkpoint
+2025-10-02 10:52:55,813 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Mental Wellbeing', loading from checkpoint
+2025-10-02 10:52:55,813 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Sleep Health', loading from checkpoint
+2025-10-02 10:52:55,814 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Stress Management', loading from checkpoint
+2025-10-02 10:52:55,814 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Hydration', loading from checkpoint
+2025-10-02 10:52:55,814 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Social Connections', loading from checkpoint
+2025-10-02 10:52:55,814 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Work-Life Balance', loading from checkpoint
+2025-10-02 10:52:55,815 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Personal Growth', loading from checkpoint
+2025-10-02 10:52:55,815 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Environmental Wellness', loading from checkpoint
+2025-10-02 10:52:55,816 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Preventive Health', loading from checkpoint
+2025-10-02 10:52:55,816 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Mindfulness Practices', loading from checkpoint
+2025-10-02 10:52:55,816 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:52:56,669 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:52:56,670 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Fitness & Exercise' - 8 items
+2025-10-02 10:52:56,670 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:52:57,080 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:52:57,080 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Nutrition & Diet' - 7 items
+2025-10-02 10:52:57,081 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:52:57,579 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:52:57,580 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Mental Health' - 8 items
+2025-10-02 10:52:57,580 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:52:57,983 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:52:57,985 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Sleep & Recovery' - 8 items
+2025-10-02 10:52:57,985 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:52:58,403 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:52:58,404 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Chronic Conditions' - 8 items
+2025-10-02 10:52:58,405 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:52:58,899 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:52:58,900 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Personal Care & Hygiene' - 8 items
+2025-10-02 10:52:58,901 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:52:59,363 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:52:59,363 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Holistic & Alternative Health' - 8 items
+2025-10-02 10:52:59,363 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:52:59,789 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:52:59,791 - health_wellbeing_generator - INFO - Generated Tier 2 for 'Wellness Lifestyles' - 8 items
+2025-10-02 10:52:59,791 - health_wellbeing_generator - INFO - Creating aggregated Tier 2 file with 159 items
+2025-10-02 10:52:59,794 - health_wellbeing_generator - INFO - Aggregated Tier 2 file saved: output/all_tier2.csv
+2025-10-02 10:52:59,794 - health_wellbeing_generator - INFO - Generated 159 Tier 2 items
+2025-10-02 10:52:59,794 - health_wellbeing_generator - INFO - Tier 1 file exists, loading from checkpoint
+2025-10-02 10:52:59,794 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Physical Activity', loading from checkpoint
+2025-10-02 10:52:59,795 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Healthy Eating', loading from checkpoint
+2025-10-02 10:52:59,795 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Mental Wellbeing', loading from checkpoint
+2025-10-02 10:52:59,796 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Sleep Health', loading from checkpoint
+2025-10-02 10:52:59,796 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Stress Management', loading from checkpoint
+2025-10-02 10:52:59,796 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Hydration', loading from checkpoint
+2025-10-02 10:52:59,797 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Social Connections', loading from checkpoint
+2025-10-02 10:52:59,797 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Work-Life Balance', loading from checkpoint
+2025-10-02 10:52:59,797 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Personal Growth', loading from checkpoint
+2025-10-02 10:52:59,797 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Environmental Wellness', loading from checkpoint
+2025-10-02 10:52:59,797 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Preventive Health', loading from checkpoint
+2025-10-02 10:52:59,798 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Mindfulness Practices', loading from checkpoint
+2025-10-02 10:52:59,798 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Fitness & Exercise', loading from checkpoint
+2025-10-02 10:52:59,798 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Nutrition & Diet', loading from checkpoint
+2025-10-02 10:52:59,798 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Mental Health', loading from checkpoint
+2025-10-02 10:52:59,798 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Sleep & Recovery', loading from checkpoint
+2025-10-02 10:52:59,799 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Chronic Conditions', loading from checkpoint
+2025-10-02 10:52:59,799 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Personal Care & Hygiene', loading from checkpoint
+2025-10-02 10:52:59,799 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Holistic & Alternative Health', loading from checkpoint
+2025-10-02 10:52:59,799 - health_wellbeing_generator - INFO - Tier 2 file exists for 'Wellness Lifestyles', loading from checkpoint
+2025-10-02 10:52:59,799 - health_wellbeing_generator - INFO - Creating aggregated Tier 2 file with 159 items
+2025-10-02 10:52:59,800 - health_wellbeing_generator - INFO - Aggregated Tier 2 file saved: output/all_tier2.csv
+2025-10-02 10:52:59,801 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Yoga', loading from checkpoint
+2025-10-02 10:52:59,801 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Strength Training', loading from checkpoint
+2025-10-02 10:52:59,801 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Cardio', loading from checkpoint
+2025-10-02 10:52:59,802 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Walking', loading from checkpoint
+2025-10-02 10:52:59,802 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Cycling', loading from checkpoint
+2025-10-02 10:52:59,803 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Dancing', loading from checkpoint
+2025-10-02 10:52:59,804 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Pilates', loading from checkpoint
+2025-10-02 10:52:59,804 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Swimming', loading from checkpoint
+2025-10-02 10:52:59,805 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Meal Planning', loading from checkpoint
+2025-10-02 10:52:59,805 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindful Eating', loading from checkpoint
+2025-10-02 10:52:59,805 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Plant-Based Diets', loading from checkpoint
+2025-10-02 10:52:59,806 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Hydration Strategies', loading from checkpoint
+2025-10-02 10:52:59,806 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Cooking Techniques', loading from checkpoint
+2025-10-02 10:52:59,807 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Snacking Smart', loading from checkpoint
+2025-10-02 10:52:59,807 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Seasonal Eating', loading from checkpoint
+2025-10-02 10:52:59,808 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Food Allergies Awareness', loading from checkpoint
+2025-10-02 10:52:59,808 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindfulness Meditation', loading from checkpoint
+2025-10-02 10:52:59,808 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Journaling', loading from checkpoint
+2025-10-02 10:52:59,809 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Nature Walks', loading from checkpoint
+2025-10-02 10:52:59,809 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Breathing Exercises', loading from checkpoint
+2025-10-02 10:52:59,809 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Progressive Muscle Relaxation', loading from checkpoint
+2025-10-02 10:52:59,809 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Art Therapy', loading from checkpoint
+2025-10-02 10:52:59,810 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Digital Detox', loading from checkpoint
+2025-10-02 10:52:59,810 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Gratitude Practices', loading from checkpoint
+2025-10-02 10:52:59,811 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Meditation', loading from checkpoint
+2025-10-02 10:52:59,811 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Breathing Exercises', loading from checkpoint
+2025-10-02 10:52:59,812 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Reading Before Bed', loading from checkpoint
+2025-10-02 10:52:59,812 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Consistent Sleep Schedule', loading from checkpoint
+2025-10-02 10:52:59,813 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindful Eating', loading from checkpoint
+2025-10-02 10:52:59,813 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Nature Exposure', loading from checkpoint
+2025-10-02 10:52:59,813 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Digital Detox', loading from checkpoint
+2025-10-02 10:52:59,813 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Relaxation Techniques', loading from checkpoint
+2025-10-02 10:52:59,814 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindfulness Meditation', loading from checkpoint
+2025-10-02 10:52:59,814 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Deep Breathing Exercises', loading from checkpoint
+2025-10-02 10:52:59,814 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Progressive Muscle Relaxation', loading from checkpoint
+2025-10-02 10:52:59,814 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Nature Walks', loading from checkpoint
+2025-10-02 10:52:59,814 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Journaling', loading from checkpoint
+2025-10-02 10:52:59,814 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Art Therapy', loading from checkpoint
+2025-10-02 10:52:59,815 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Laughter Yoga', loading from checkpoint
+2025-10-02 10:52:59,815 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Guided Imagery', loading from checkpoint
+2025-10-02 10:52:59,816 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Daily Water Intake Goals', loading from checkpoint
+2025-10-02 10:52:59,816 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Hydration Tracking Apps', loading from checkpoint
+2025-10-02 10:52:59,817 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Electrolyte Balance', loading from checkpoint
+2025-10-02 10:52:59,817 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Hydration Before, During, and After Exercise', loading from checkpoint
+2025-10-02 10:52:59,817 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Infused Water Recipes', loading from checkpoint
+2025-10-02 10:52:59,817 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Hydration Myths Debunked', loading from checkpoint
+2025-10-02 10:52:59,818 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Optimal Water Temperatures', loading from checkpoint
+2025-10-02 10:52:59,818 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Hydration for Different Weather Conditions', loading from checkpoint
+2025-10-02 10:52:59,818 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Community Volunteering', loading from checkpoint
+2025-10-02 10:52:59,818 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Book Clubs', loading from checkpoint
+2025-10-02 10:52:59,819 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Online Support Groups', loading from checkpoint
+2025-10-02 10:52:59,820 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Local Meetups', loading from checkpoint
+2025-10-02 10:52:59,820 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Family Game Nights', loading from checkpoint
+2025-10-02 10:52:59,820 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Neighborhood Walks', loading from checkpoint
+2025-10-02 10:52:59,820 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Friendship Circles', loading from checkpoint
+2025-10-02 10:52:59,820 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Social Cooking Classes', loading from checkpoint
+2025-10-02 10:52:59,821 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindfulness Meditation', loading from checkpoint
+2025-10-02 10:52:59,821 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Time Management Techniques', loading from checkpoint
+2025-10-02 10:52:59,821 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Healthy Eating Habits', loading from checkpoint
+2025-10-02 10:52:59,822 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Digital Detox', loading from checkpoint
+2025-10-02 10:52:59,822 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Outdoor Activities', loading from checkpoint
+2025-10-02 10:52:59,822 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Volunteering', loading from checkpoint
+2025-10-02 10:52:59,822 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Creative Hobbies', loading from checkpoint
+2025-10-02 10:52:59,822 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Social Connections', loading from checkpoint
+2025-10-02 10:52:59,823 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindfulness Meditation', loading from checkpoint
+2025-10-02 10:52:59,823 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Journaling', loading from checkpoint
+2025-10-02 10:52:59,823 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Goal Setting', loading from checkpoint
+2025-10-02 10:52:59,823 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Public Speaking', loading from checkpoint
+2025-10-02 10:52:59,823 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Creative Writing', loading from checkpoint
+2025-10-02 10:52:59,823 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Time Management', loading from checkpoint
+2025-10-02 10:52:59,824 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Learning a New Skill', loading from checkpoint
+2025-10-02 10:52:59,824 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Volunteering', loading from checkpoint
+2025-10-02 10:52:59,824 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Sustainable Living Practices', loading from checkpoint
+2025-10-02 10:52:59,825 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Eco-Friendly Home Design', loading from checkpoint
+2025-10-02 10:52:59,825 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Green Transportation Choices', loading from checkpoint
+2025-10-02 10:52:59,826 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Waste Reduction Techniques', loading from checkpoint
+2025-10-02 10:52:59,826 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Community Gardening', loading from checkpoint
+2025-10-02 10:52:59,826 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Nature-Based Therapy', loading from checkpoint
+2025-10-02 10:52:59,826 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Water Conservation Methods', loading from checkpoint
+2025-10-02 10:52:59,826 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Air Quality Improvement', loading from checkpoint
+2025-10-02 10:52:59,827 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindfulness Meditation', loading from checkpoint
+2025-10-02 10:52:59,827 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Balance Exercises', loading from checkpoint
+2025-10-02 10:52:59,827 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Healthy Eating Habits', loading from checkpoint
+2025-10-02 10:52:59,827 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Regular Health Screenings', loading from checkpoint
+2025-10-02 10:52:59,827 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Stress Management Techniques', loading from checkpoint
+2025-10-02 10:52:59,828 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Sleep Hygiene Practices', loading from checkpoint
+2025-10-02 10:52:59,828 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Hydration Strategies', loading from checkpoint
+2025-10-02 10:52:59,828 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Sun Protection', loading from checkpoint
+2025-10-02 10:52:59,828 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Meditation', loading from checkpoint
+2025-10-02 10:52:59,828 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Breathing Exercises', loading from checkpoint
+2025-10-02 10:52:59,828 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindful Eating', loading from checkpoint
+2025-10-02 10:52:59,829 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Body Scan', loading from checkpoint
+2025-10-02 10:52:59,829 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Walking Meditation', loading from checkpoint
+2025-10-02 10:52:59,830 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Gratitude Journaling', loading from checkpoint
+2025-10-02 10:52:59,830 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindful Listening', loading from checkpoint
+2025-10-02 10:52:59,830 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindful Movement', loading from checkpoint
+2025-10-02 10:52:59,830 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Yoga', loading from checkpoint
+2025-10-02 10:52:59,830 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Strength Training', loading from checkpoint
+2025-10-02 10:52:59,831 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Cardio', loading from checkpoint
+2025-10-02 10:52:59,831 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:00,399 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:00,401 - health_wellbeing_generator - INFO - Generated Tier 3 for 'High-Intensity Interval Training (HIIT)' - 10 seeds
+2025-10-02 10:53:00,401 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Pilates', loading from checkpoint
+2025-10-02 10:53:00,402 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Walking', loading from checkpoint
+2025-10-02 10:53:00,402 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Cycling', loading from checkpoint
+2025-10-02 10:53:00,402 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:00,943 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:00,945 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Dance Fitness' - 10 seeds
+2025-10-02 10:53:00,945 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Meal Planning', loading from checkpoint
+2025-10-02 10:53:00,946 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:01,539 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:01,540 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Plant-Based Eating' - 10 seeds
+2025-10-02 10:53:01,540 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Hydration Strategies', loading from checkpoint
+2025-10-02 10:53:01,541 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindful Eating', loading from checkpoint
+2025-10-02 10:53:01,541 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:02,099 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:02,100 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Healthy Snacking' - 10 seeds
+2025-10-02 10:53:02,100 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Cooking Techniques', loading from checkpoint
+2025-10-02 10:53:02,100 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:02,734 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:02,735 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Nutritional Balance' - 10 seeds
+2025-10-02 10:53:02,735 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindfulness Meditation', loading from checkpoint
+2025-10-02 10:53:02,735 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:03,304 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:03,305 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Cognitive Behavioral Techniques' - 10 seeds
+2025-10-02 10:53:03,306 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Journaling', loading from checkpoint
+2025-10-02 10:53:03,306 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:03,851 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:03,852 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Nature Therapy' - 5 seeds
+2025-10-02 10:53:03,853 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Art Therapy', loading from checkpoint
+2025-10-02 10:53:03,853 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:04,452 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:04,453 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Breathwork' - 10 seeds
+2025-10-02 10:53:04,453 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Progressive Muscle Relaxation', loading from checkpoint
+2025-10-02 10:53:04,453 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Digital Detox', loading from checkpoint
+2025-10-02 10:53:04,453 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Meditation', loading from checkpoint
+2025-10-02 10:53:04,453 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Deep Breathing Exercises', loading from checkpoint
+2025-10-02 10:53:04,454 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Progressive Muscle Relaxation', loading from checkpoint
+2025-10-02 10:53:04,454 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Guided Imagery', loading from checkpoint
+2025-10-02 10:53:04,454 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:05,005 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:05,005 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Sleep Hygiene' - 10 seeds
+2025-10-02 10:53:05,006 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Nature Walks', loading from checkpoint
+2025-10-02 10:53:05,006 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:05,580 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:05,582 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Warm Baths' - 10 seeds
+2025-10-02 10:53:05,582 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Journaling', loading from checkpoint
+2025-10-02 10:53:05,583 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindfulness Meditation', loading from checkpoint
+2025-10-02 10:53:05,583 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:06,087 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:06,088 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Walking Programs' - 10 seeds
+2025-10-02 10:53:06,088 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Balance Exercises', loading from checkpoint
+2025-10-02 10:53:06,088 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:06,595 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:06,597 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Breathing Techniques' - 10 seeds
+2025-10-02 10:53:06,597 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:07,204 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:07,205 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Healthy Eating Plans' - 9 seeds
+2025-10-02 10:53:07,205 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:07,698 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:07,700 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Stress Management' - 10 seeds
+2025-10-02 10:53:07,700 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:08,196 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:08,196 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Gardening Therapy' - 0 seeds
+2025-10-02 10:53:08,197 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:08,708 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:08,710 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Social Support Groups' - 9 seeds
+2025-10-02 10:53:08,710 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:09,257 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:09,258 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Daily Skincare Routine' - 10 seeds
+2025-10-02 10:53:09,259 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:09,787 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:09,789 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Oral Hygiene Practices' - 10 seeds
+2025-10-02 10:53:09,790 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:10,336 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:10,337 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Proper Hand Washing Techniques' - 10 seeds
+2025-10-02 10:53:10,338 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:10,868 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:10,870 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Healthy Hair Care Tips' - 10 seeds
+2025-10-02 10:53:10,870 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:11,405 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:11,405 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Effective Deodorant Use' - 10 seeds
+2025-10-02 10:53:11,405 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:11,879 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:11,881 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Foot Care Essentials' - 10 seeds
+2025-10-02 10:53:11,881 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:12,457 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:12,459 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Nail Hygiene Practices' - 10 seeds
+2025-10-02 10:53:12,459 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:12,985 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:12,987 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Menstrual Hygiene Tips' - 10 seeds
+2025-10-02 10:53:12,989 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:13,503 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:13,504 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Acupuncture' - 10 seeds
+2025-10-02 10:53:13,504 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Meditation', loading from checkpoint
+2025-10-02 10:53:13,505 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:14,080 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:14,081 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Herbal Remedies' - 10 seeds
+2025-10-02 10:53:14,082 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:14,640 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:14,642 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Tai Chi' - 10 seeds
+2025-10-02 10:53:14,642 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:15,156 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:15,156 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Aromatherapy' - 0 seeds
+2025-10-02 10:53:15,157 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:15,747 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:15,748 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Reiki' - 10 seeds
+2025-10-02 10:53:15,748 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:16,307 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:16,308 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Chiropractic Care' - 10 seeds
+2025-10-02 10:53:16,308 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:16,866 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:16,869 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Naturopathy' - 10 seeds
+2025-10-02 10:53:16,869 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Mindfulness Meditation', loading from checkpoint
+2025-10-02 10:53:16,870 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Plant-Based Eating', loading from checkpoint
+2025-10-02 10:53:16,870 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Nature Walks', loading from checkpoint
+2025-10-02 10:53:16,871 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Breathing Exercises', loading from checkpoint
+2025-10-02 10:53:16,871 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Journaling', loading from checkpoint
+2025-10-02 10:53:16,872 - bedrock_client_adapted - INFO - Invoking Bedrock model amazon.nova-micro-v1:0 (attempt 1/3)
+2025-10-02 10:53:17,325 - bedrock_client_adapted - INFO - Bedrock model amazon.nova-micro-v1:0 responded successfully
+2025-10-02 10:53:17,327 - health_wellbeing_generator - INFO - Generated Tier 3 for 'Hydration Practices' - 10 seeds
+2025-10-02 10:53:17,327 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Sleep Hygiene', loading from checkpoint
+2025-10-02 10:53:17,328 - health_wellbeing_generator - INFO - Tier 3 file exists for 'Social Connections', loading from checkpoint
+2025-10-02 10:53:17,329 - health_wellbeing_generator - INFO - Creating aggregated Tier 3 file with 1514 seeds
+2025-10-02 10:53:17,338 - health_wellbeing_generator - INFO - Aggregated Tier 3 file saved: output/all_tier3.csv
+2025-10-02 10:53:17,338 - health_wellbeing_generator - INFO - Generated 1514 Tier 3 seeds
+2025-10-02 10:53:17,339 - __main__ - INFO - ============================================================
+2025-10-02 10:53:17,339 - __main__ - INFO - GENERATION COMPLETE - SUMMARY
+2025-10-02 10:53:17,339 - __main__ - INFO - ============================================================
+2025-10-02 10:53:17,339 - __main__ - INFO - Tier 1 categories generated: 20
+2025-10-02 10:53:17,339 - __main__ - INFO - Tier 2 items generated: 159
+2025-10-02 10:53:17,339 - __main__ - INFO - Tier 3 seeds generated: 1514
+2025-10-02 10:53:17,339 - __main__ - INFO - No errors encountered
+2025-10-02 10:53:17,339 - __main__ - INFO - Output files saved to: output/
+2025-10-02 10:53:17,339 - __main__ - INFO -   - tier1.json
+2025-10-02 10:53:17,339 - __main__ - INFO -   - all_tier2.csv (aggregated Tier 2 data)
+2025-10-02 10:53:17,339 - __main__ - INFO -   - tier2_[category].csv files (separate file for each Tier 1 category)
+2025-10-02 10:53:17,340 - __main__ - INFO -   - all_tier3.csv (aggregated Tier 3 data)
+2025-10-02 10:53:17,340 - __main__ - INFO -   - tier3_[practice].csv files (separate file for each Tier 2 practice)
+2025-10-02 10:53:17,340 - __main__ - INFO - Total items generated: 1693
+2025-10-02 10:53:17,340 - __main__ - INFO - ============================================================
