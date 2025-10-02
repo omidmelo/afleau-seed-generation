@@ -1,13 +1,17 @@
 """
-Configuration for Health & Wellbeing data generation
+Configuration for data generation (supports multiple categories)
 """
 
 from dataclasses import dataclass
+from typing import Optional
 
 
 @dataclass
-class HealthWellbeingConfig:
-    """Configuration for Health & Wellbeing data generation"""
+class DataGenerationConfig:
+    """Configuration for data generation across multiple categories"""
+    # Category settings
+    category: str = "health_wellbeing"  # Default category for backward compatibility
+    
     # Bedrock settings
     region: str = "us-east-1"
     model_id: str = "amazon.nova-micro-v1:0"
@@ -21,14 +25,22 @@ class HealthWellbeingConfig:
     # tier3_batch_size: int = 6  # Number of Tier 3 seeds to generate per Tier 2
     
     # Output settings
-    output_dir: str = "output"
+    base_output_dir: str = "output"  # Base directory for all outputs
     tier1_filename: str = "tier1.json"
     # Note: tier2 and tier3 files are now generated dynamically per category/practice
     
     # Safety settings
     max_seed_length: int = 50  # Maximum length for Tier 3 seeds
     min_seed_length: int = 10  # Minimum length for Tier 3 seeds
+    
+    def get_output_dir(self) -> str:
+        """Get the output directory for the current category"""
+        return f"{self.base_output_dir}_{self.category}"
+    
+    def get_tier1_file(self) -> str:
+        """Get the Tier 1 filename for the current category"""
+        return f"tier1_{self.category}.json"
 
 
 # Global config instance
-config = HealthWellbeingConfig()
+config = DataGenerationConfig()

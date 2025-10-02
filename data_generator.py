@@ -1,5 +1,5 @@
 """
-Health & Wellbeing data generator service
+Data generator service (supports multiple categories)
 Main service class with CSV checkpointing and resumability
 """
 
@@ -14,27 +14,34 @@ from typing import Dict, Any, List, Optional, Set
 from pathlib import Path
 
 from bedrock_client_adapted import BedrockClient, BedrockError
-from health_wellbeing_config import config
-from health_wellbeing_prompts import build_tier1_prompt, build_tier2_prompt, build_tier3_prompt
+from data_generation_config import config
+from prompt_registry import prompt_registry
 
 logger = logging.getLogger(__name__)
 
 
-class HealthWellbeingDataGenerator:
-    """Main service for generating Health & Wellbeing hierarchical data"""
+class DataGenerator:
+    """Main service for generating hierarchical data across multiple categories"""
     
-    def __init__(self, bedrock_client: BedrockClient):
+    def __init__(self, bedrock_client: BedrockClient, category: str = "health_wellbeing"):
         self.client = bedrock_client
+        self.category = category
         self.config = config
-        self.output_dir = Path(self.config.output_dir)
+        self.config.category = category  # Update config with the category
+        
+        # Get category-specific prompts
+        self.prompts = prompt_registry.get_prompts(category)
+        
+        # Set up output directory
+        self.output_dir = Path(self.config.get_output_dir())
         self.output_dir.mkdir(exist_ok=True)
         
         # File paths
-        self.tier1_file = self.output_dir / self.config.tier1_filename
+        self.tier1_file = self.output_dir / self.config.get_tier1_file()
         
         # Aggregated file paths
-        self.tier2_aggregated_file = self.output_dir / "all_tier2.csv"
-        self.tier3_aggregated_file = self.output_dir / "all_tier3.csv"
+        self.tier2_aggregated_file = self.output_dir / f"all_tier2_{category}.csv"
+        self.tier3_aggregated_file = self.output_dir / f"all_tier3_{category}.csv"
         
         # Deduplication tracking
         self.seed_hashes: Set[str] = set()
@@ -85,8 +92,8 @@ class HealthWellbeingDataGenerator:
             logger.info("Tier 1 file exists, loading from checkpoint")
             return self._load_tier1_from_file()
         
-        logger.info("Generating Tier 1 categories")
-        prompt = build_tier1_prompt()
+        logger.info(f"Generating Tier 1 categories for {self.category}")
+        prompt = self.prompts.build_tier1_prompt()
         
         try:
             response = await self.client.invoke_model(
@@ -121,7 +128,7 @@ class HealthWellbeingDataGenerator:
         
         # Process each Tier 1 category
         for tier1_name in tier1_data:
-            tier2_filename = f"tier2_{self._sanitize_filename(tier1_name)}.csv"
+            tier2_filename = f"tier2_{self.category}_{self._sanitize_filename(tier1_name)}.csv"
             tier2_file_path = self.output_dir / tier2_filename
             
             # Check if this Tier 2 file already exists
@@ -152,7 +159,7 @@ class HealthWellbeingDataGenerator:
     
     async def _generate_tier2_for_category(self, tier1_name: str) -> List[Dict[str, Any]]:
         """Generate Tier 2 items for a specific Tier 1 category"""
-        prompt = build_tier2_prompt(tier1_name)
+        prompt = self.prompts.build_tier2_prompt(tier1_name)
         
         response = await self.client.invoke_model(
             model_id=self.config.model_id,
@@ -189,7 +196,7 @@ class HealthWellbeingDataGenerator:
             tier1_name = tier2_item["tier1_name"]
             tier2_name = tier2_item["tier2_name"]
             
-            tier3_filename = f"tier3_{self._sanitize_filename(tier2_name)}.csv"
+            tier3_filename = f"tier3_{self.category}_{self._sanitize_filename(tier2_name)}.csv"
             tier3_file_path = self.output_dir / tier3_filename
             
             # Check if this Tier 3 file already exists
@@ -223,7 +230,7 @@ class HealthWellbeingDataGenerator:
     
     async def _generate_tier3_for_item(self, tier2_item: Dict[str, Any]) -> List[Dict[str, Any]]:
         """Generate Tier 3 seeds for a specific Tier 2 item"""
-        prompt = build_tier3_prompt(
+        prompt = self.prompts.build_tier3_prompt(
             tier2_item["tier1_name"],
             tier2_item["tier2_name"]
         )
