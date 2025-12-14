@@ -20,8 +20,9 @@ class PromptRegistry:
     def _discover_categories(self) -> list:
         """Discover available categories by scanning for prompt files"""
         categories = []
-        current_dir = Path(__file__).parent
-        prompts_dir = current_dir / "prompts"
+        # Get the project root (parent of lib directory)
+        project_root = Path(__file__).parent.parent
+        prompts_dir = project_root / "prompts"
         
         # Look for prompt files in the prompts subdirectory
         for file_path in prompts_dir.glob("*_prompts.py"):
@@ -69,3 +70,4 @@ class PromptRegistry:
 
 # Global registry instance
 prompt_registry = PromptRegistry()
+

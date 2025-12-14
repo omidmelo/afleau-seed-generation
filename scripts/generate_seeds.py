@@ -9,17 +9,24 @@ import sys
 import argparse
 from pathlib import Path
 
-from bedrock_client_adapted import BedrockClient, BedrockError
-from data_generator import DataGenerator
-from data_generation_config import config
-from prompt_registry import prompt_registry
+# Add project root to Python path
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
+
+from lib.bedrock_client import BedrockClient, BedrockError
+from lib.generator import DataGenerator
+from lib.config import config
+from lib.registry import prompt_registry
+
+# Ensure logs directory exists
+Path('logs').mkdir(exist_ok=True)
 
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('health_wellbeing_generation.log'),
+        logging.FileHandler('logs/health_wellbeing_generation.log'),
         logging.StreamHandler(sys.stdout)
     ]
 )
@@ -116,3 +123,4 @@ async def main():
 if __name__ == "__main__":
     exit_code = asyncio.run(main())
     sys.exit(exit_code)
+

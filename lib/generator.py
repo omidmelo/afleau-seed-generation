@@ -13,9 +13,9 @@ import re
 from typing import Dict, Any, List, Optional, Set
 from pathlib import Path
 
-from bedrock_client_adapted import BedrockClient, BedrockError
-from data_generation_config import config
-from prompt_registry import prompt_registry
+from lib.bedrock_client import BedrockClient, BedrockError
+from lib.config import config
+from lib.registry import prompt_registry
 
 logger = logging.getLogger(__name__)
 
@@ -36,7 +36,7 @@ class DataGenerator:
         
         # Set up output directory
         self.output_dir = Path(self.config.get_output_dir())
-        self.output_dir.mkdir(exist_ok=True)
+        self.output_dir.mkdir(parents=True, exist_ok=True)
         
         # File paths
         self.tier1_file = self.output_dir / self.config.get_tier1_file()
@@ -57,7 +57,7 @@ class DataGenerator:
     
     async def generate_all_data(self) -> Dict[str, Any]:
         """Generate all three tiers of data with checkpointing"""
-        logger.info("Starting Health & Wellbeing data generation")
+        logger.info("Starting data generation")
         
         results = {
             "tier1_count": 0,
@@ -408,3 +408,4 @@ class DataGenerator:
                 })
         
         logger.info(f"Aggregated Tier 3 file saved: {self.tier3_aggregated_file}")
+

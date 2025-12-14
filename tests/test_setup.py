@@ -15,10 +15,11 @@ logger = logging.getLogger(__name__)
 def test_imports():
     """Test that all modules can be imported"""
     try:
-        from bedrock_client_adapted import BedrockClient, BedrockError
-        from health_wellbeing_generator import HealthWellbeingDataGenerator
-        from health_wellbeing_config import config
-        from health_wellbeing_prompts import build_tier1_prompt, build_tier2_prompt, build_tier3_prompt
+        from lib.bedrock_client import BedrockClient, BedrockError
+        from lib.generator import DataGenerator
+        from lib.config import config
+        from lib.registry import prompt_registry
+        from prompts.health_wellbeing_prompts import build_tier1_prompt, build_tier2_prompt, build_tier3_prompt
         logger.info("✓ All imports successful")
         return True
     except ImportError as e:
@@ -29,7 +30,7 @@ def test_imports():
 def test_config():
     """Test configuration values"""
     try:
-        from health_wellbeing_config import config
+        from lib.config import config
         
         # Check required config values
         assert config.model_id == "amazon.nova-micro-v1:0"
@@ -48,7 +49,7 @@ def test_config():
 def test_prompts():
     """Test prompt generation"""
     try:
-        from health_wellbeing_prompts import build_tier1_prompt, build_tier2_prompt, build_tier3_prompt
+        from prompts.health_wellbeing_prompts import build_tier1_prompt, build_tier2_prompt, build_tier3_prompt
         
         # Test Tier 1 prompt
         tier1_prompt = build_tier1_prompt()
@@ -62,7 +63,7 @@ def test_prompts():
         assert "tier2_items" in tier2_prompt
         
         # Test Tier 3 prompt
-        tier3_prompt = build_tier3_prompt("Fitness", "Yoga")
+        tier3_prompt = build_tier3_prompt("Fitness", "Yoga", "youtube")
         assert len(tier3_prompt) > 100
         assert "Yoga" in tier3_prompt
         assert "search_seeds" in tier3_prompt
@@ -77,11 +78,11 @@ def test_prompts():
 def test_output_directory():
     """Test output directory creation"""
     try:
-        from health_wellbeing_config import config
+        from lib.config import config
         from pathlib import Path
         
-        output_dir = Path(config.output_dir)
-        output_dir.mkdir(exist_ok=True)
+        output_dir = Path(config.get_output_dir())
+        output_dir.mkdir(parents=True, exist_ok=True)
         
         assert output_dir.exists()
         logger.info(f"✓ Output directory created: {output_dir}")
@@ -123,3 +124,4 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+

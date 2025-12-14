@@ -1,6 +1,5 @@
 """
-Adapted Bedrock client for Health & Wellbeing data generation
-Based on the original bedrock_client.py but simplified for our use case
+Bedrock client for data generation
 """
 
 import json
@@ -14,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 
 class BedrockClient:
-    """Bedrock client wrapper for Health & Wellbeing data generation"""
+    """Bedrock client wrapper for data generation"""
     
     def __init__(self, region: str = "us-east-1"):
         self.region = region
@@ -130,3 +129,4 @@ class BedrockClient:
 class BedrockError(Exception):
     """Custom exception for Bedrock-related errors"""
     pass
+

@@ -28,7 +28,7 @@ class DataGenerationConfig:
     # tier3_batch_size: int = 6  # Number of Tier 3 seeds to generate per Tier 2
     
     # Output settings
-    base_output_dir: str = "output"  # Base directory for all outputs
+    base_output_dir: str = "data"  # Base directory for all outputs
     tier1_filename: str = "tier1.json"
     # Note: tier2 and tier3 files are now generated dynamically per category/practice
     
@@ -38,7 +38,7 @@ class DataGenerationConfig:
     
     def get_output_dir(self) -> str:
         """Get the output directory for the current category and platform"""
-        return f"{self.base_output_dir}_{self.category}_{self.platform}"
+        return f"{self.base_output_dir}/{self.platform}/{self.category}"
     
     def get_tier1_file(self) -> str:
         """Get the Tier 1 filename for the current category"""
@@ -52,3 +52,4 @@ class DataGenerationConfig:
 
 # Global config instance
 config = DataGenerationConfig()
+
