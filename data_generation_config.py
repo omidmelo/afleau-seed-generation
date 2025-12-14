@@ -12,6 +12,9 @@ class DataGenerationConfig:
     # Category settings
     category: str = "health_wellbeing"  # Default category for backward compatibility
     
+    # Platform settings
+    platform: str = "youtube"  # Default platform: 'youtube' or 'instagram'
+    
     # Bedrock settings
     region: str = "us-east-1"
     model_id: str = "amazon.nova-micro-v1:0"
@@ -34,12 +37,17 @@ class DataGenerationConfig:
     min_seed_length: int = 10  # Minimum length for Tier 3 seeds
     
     def get_output_dir(self) -> str:
-        """Get the output directory for the current category"""
-        return f"{self.base_output_dir}_{self.category}"
+        """Get the output directory for the current category and platform"""
+        return f"{self.base_output_dir}_{self.category}_{self.platform}"
     
     def get_tier1_file(self) -> str:
         """Get the Tier 1 filename for the current category"""
         return f"tier1_{self.category}.json"
+    
+    @staticmethod
+    def is_valid_platform(platform: str) -> bool:
+        """Check if platform is valid"""
+        return platform.lower() in ["youtube", "instagram"]
 
 
 # Global config instance

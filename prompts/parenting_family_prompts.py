@@ -56,8 +56,8 @@ Return ONLY valid JSON in this exact format:
 
 Generate exactly 5-8 items for "{tier1_name}". Return ONLY the JSON, no additional text."""
 
-# Tier 3 Prompt Template
-TIER_3_PROMPT = """You are an expert in Parenting & Family content creation. Generate natural YouTube-style search queries (seeds) for the given Tier 2 practice.
+# Tier 3 Prompt Template - YouTube
+TIER_3_YOUTUBE_PROMPT = """You are an expert in Parenting & Family content creation. Generate natural YouTube-style search queries (seeds) for the given Tier 2 practice.
 
 TASK: Create 6-10 natural search queries for "{tier2_name}" that sound like real YouTube searches. These should be:
 - Natural, conversational search phrases
@@ -98,6 +98,49 @@ Return ONLY valid JSON in this exact format:
 
 Generate exactly 6-10 search seeds for "{tier2_name}". Return ONLY the JSON, no additional text."""
 
+# Tier 3 Prompt Template - Instagram
+TIER_3_INSTAGRAM_PROMPT = """You are an expert in Parenting & Family content creation. Generate natural Instagram-style search queries (seeds) for the given Tier 2 practice.
+
+TASK: Create 6-10 natural search queries for "{tier2_name}" that sound like real Instagram searches. These should be:
+- Short, hashtag-friendly phrases
+- Visual and family-focused
+- Include popular hashtag variations
+- Cover different contexts (tips, inspiration, activities, etc.)
+- Include quick tips and visual content-focused queries
+
+REQUIREMENTS:
+- Each query should be 2-6 words long
+- Sound like real user searches on Instagram
+- Include variations that work well with hashtags
+- Avoid overly clinical or academic language
+- Be specific enough to generate targeted results
+- Focus on visual content, quick tips, and family inspiration
+
+SAFETY GUIDELINES:
+- NO specific medical advice or diagnostic claims
+- NO content that could be harmful to children
+- NO extreme or controversial parenting methods
+- NO content promoting unsafe practices
+- NO content that could be inappropriate for children
+- Focus on evidence-based, positive parenting approaches
+- Ensure all content is family-friendly and age-appropriate
+
+Return ONLY valid JSON in this exact format:
+
+{{
+  "tier1_name": "{tier1_name}",
+  "tier2_name": "{tier2_name}",
+  "search_seeds": [
+    "toddler activities",
+    "parenting tips",
+    "family fun",
+    "kids activities",
+    "parenting hacks"
+  ]
+}}
+
+Generate exactly 6-10 search seeds for "{tier2_name}". Return ONLY the JSON, no additional text."""
+
 
 def build_tier1_prompt() -> str:
     """Build the Tier 1 generation prompt"""
@@ -109,9 +152,14 @@ def build_tier2_prompt(tier1_name: str) -> str:
     return TIER_2_PROMPT.format(tier1_name=tier1_name)
 
 
-def build_tier3_prompt(tier1_name: str, tier2_name: str) -> str:
-    """Build the Tier 3 generation prompt for a specific Tier 2 item"""
-    return TIER_3_PROMPT.format(
+def build_tier3_prompt(tier1_name: str, tier2_name: str, platform: str = "youtube") -> str:
+    """Build the Tier 3 generation prompt for a specific Tier 2 item and platform"""
+    if platform.lower() == "instagram":
+        prompt_template = TIER_3_INSTAGRAM_PROMPT
+    else:
+        prompt_template = TIER_3_YOUTUBE_PROMPT
+    
+    return prompt_template.format(
         tier1_name=tier1_name,
         tier2_name=tier2_name
     )

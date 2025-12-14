@@ -23,11 +23,13 @@ logger = logging.getLogger(__name__)
 class DataGenerator:
     """Main service for generating hierarchical data across multiple categories"""
     
-    def __init__(self, bedrock_client: BedrockClient, category: str = "health_wellbeing"):
+    def __init__(self, bedrock_client: BedrockClient, category: str = "health_wellbeing", platform: str = "youtube"):
         self.client = bedrock_client
         self.category = category
+        self.platform = platform
         self.config = config
         self.config.category = category  # Update config with the category
+        self.config.platform = platform  # Update config with the platform
         
         # Get category-specific prompts
         self.prompts = prompt_registry.get_prompts(category)
@@ -41,7 +43,7 @@ class DataGenerator:
         
         # Aggregated file paths
         self.tier2_aggregated_file = self.output_dir / f"all_tier2_{category}.csv"
-        self.tier3_aggregated_file = self.output_dir / f"all_tier3_{category}.csv"
+        self.tier3_aggregated_file = self.output_dir / f"all_tier3_{category}_{platform}.csv"
         
         # Deduplication tracking
         self.seed_hashes: Set[str] = set()
@@ -196,7 +198,7 @@ class DataGenerator:
             tier1_name = tier2_item["tier1_name"]
             tier2_name = tier2_item["tier2_name"]
             
-            tier3_filename = f"tier3_{self.category}_{self._sanitize_filename(tier2_name)}.csv"
+            tier3_filename = f"tier3_{self.category}_{self.platform}_{self._sanitize_filename(tier2_name)}.csv"
             tier3_file_path = self.output_dir / tier3_filename
             
             # Check if this Tier 3 file already exists
@@ -232,7 +234,8 @@ class DataGenerator:
         """Generate Tier 3 seeds for a specific Tier 2 item"""
         prompt = self.prompts.build_tier3_prompt(
             tier2_item["tier1_name"],
-            tier2_item["tier2_name"]
+            tier2_item["tier2_name"],
+            self.platform
         )
         
         response = await self.client.invoke_model(
