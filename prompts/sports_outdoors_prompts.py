@@ -1,38 +1,40 @@
 """
-Prompt templates for Home, DIY & Decor data generation
+Prompt templates for Sports & Outdoors data generation
 Each prompt enforces strict JSON output with validation
 """
 
 # Tier 1 Prompt Template
-TIER_1_PROMPT = """You are an expert in Home, DIY & Decor domains. Generate a comprehensive list of broad categories that cover the entire spectrum of home improvement, DIY projects, and interior design topics.
+TIER_1_PROMPT = """You are an expert in Sports & Outdoors domains. Generate a comprehensive list of broad categories that cover the entire spectrum of sports and outdoor activities.
 
-TASK: Create 8-12 broad Tier 1 categories for Home, DIY & Decor that are:
-- Comprehensive and cover major home improvement/DIY areas
+TASK: Create 12-15 broad Tier 1 categories for Sports & Outdoors that are:
+- Comprehensive and cover major sports and outdoor areas
 - Mutually exclusive (minimal overlap)
 - Broad enough to contain multiple sub-topics
-- Relevant to general audience seeking home improvement information
+- Relevant to general audience seeking sports and outdoor information
 
 REQUIREMENTS:
 - Each category should have a clear, descriptive name
 - Avoid overly technical or academic terminology
-- Focus on accessible, practical home improvement categories
+- Focus on accessible, popular sports and outdoor categories
+- Include both team sports and individual activities
+- Cover different skill levels and outdoor adventures
 
 Return ONLY valid JSON in this exact format:
 
 {
   "tier1_categories": [
-    "Interior Design",
-    "DIY Projects",
-    "Home Maintenance"
+    "Team Sports",
+    "Individual Sports",
+    "Outdoor Adventures"
   ]
 }
 
-Generate exactly 8-12 categories. Return ONLY the JSON, no additional text."""
+Generate exactly 12-15 categories. Return ONLY the JSON, no additional text."""
 
 # Tier 2 Prompt Template
-TIER_2_PROMPT = """You are an expert in Home, DIY & Decor domains. Generate specific practices, sub-topics, or areas within the given Tier 1 category.
+TIER_2_PROMPT = """You are an expert in Sports & Outdoors domains. Generate specific practices, sub-topics, or areas within the given Tier 1 category.
 
-TASK: Create 5-8 specific Tier 2 items for the category "{tier1_name}" that are:
+TASK: Create 8-12 specific Tier 2 items for the category "{tier1_name}" that are:
 - Specific practices, methods, or sub-areas within the category
 - Popular and commonly searched topics
 - Accessible to general audience
@@ -41,30 +43,30 @@ TASK: Create 5-8 specific Tier 2 items for the category "{tier1_name}" that are:
 REQUIREMENTS:
 - Each item should be a specific practice or topic area
 - Avoid overly technical or academic terminology
-- Focus on actionable, practical home improvement topics
+- Focus on actionable, practical sports and outdoor topics
 
 Return ONLY valid JSON in this exact format:
 
 {{
   "tier1_name": "{tier1_name}",
   "tier2_items": [
-    "Living Room Design",
-    "Kitchen Renovation",
-    "Bedroom Makeover"
+    "Basketball",
+    "Soccer",
+    "Tennis"
   ]
 }}
 
-Generate exactly 5-8 items for "{tier1_name}". Return ONLY the JSON, no additional text."""
+Generate exactly 8-12 items for "{tier1_name}". Return ONLY the JSON, no additional text."""
 
 # Tier 3 Prompt Template
 # Tier 3 Prompt Template - YouTube
-TIER_3_YOUTUBE_PROMPT = """You are an expert in Home, DIY & Decor content creation. Generate natural YouTube-style search queries (seeds) for the given Tier 2 practice.
+TIER_3_YOUTUBE_PROMPT = """You are an expert in Sports & Outdoors content creation. Generate natural YouTube-style search queries (seeds) for the given Tier 2 practice.
 
-TASK: Create 8-12 natural search queries for "{tier2_name}" that sound like real YouTube searches. These should be:
+TASK: Create 10-15 natural search queries for "{tier2_name}" that sound like real YouTube searches. These should be:
 - Natural, conversational search phrases
 - Varied in specificity and approach
-- Include different skill levels (beginner, intermediate, advanced)
-- Cover different contexts (budget, luxury, quick fixes, etc.)
+- Include different skill levels and training styles
+- Cover different contexts (tutorials, highlights, tips, gear reviews, etc.)
 - Include time-based variations (5 min, 10 min, 30 min, etc.)
 
 REQUIREMENTS:
@@ -80,24 +82,24 @@ Return ONLY valid JSON in this exact format:
   "tier1_name": "{tier1_name}",
   "tier2_name": "{tier2_name}",
   "search_seeds": [
-    "DIY home decor ideas",
-    "budget room makeover",
-    "interior design tips",
-    "home improvement hacks",
-    "decorating on a budget"
+    "basketball training tips",
+    "how to improve shooting",
+    "basketball drills for beginners",
+    "basketball highlights",
+    "basketball gear reviews"
   ]
 }}
 
-Generate exactly 8-12 search seeds for "{tier2_name}". Return ONLY the JSON, no additional text."""
+Generate exactly 10-15 search seeds for "{tier2_name}". Return ONLY the JSON, no additional text."""
 
 # Tier 3 Prompt Template - Instagram
-TIER_3_INSTAGRAM_PROMPT = """You are an expert in Home, DIY & Decor content creation. Generate natural Instagram-style search queries (seeds) for the given Tier 2 practice.
+TIER_3_INSTAGRAM_PROMPT = """You are an expert in Sports & Outdoors content creation. Generate natural Instagram-style search queries (seeds) for the given Tier 2 practice.
 
-TASK: Create 8-12 natural search queries for "{tier2_name}" that sound like real Instagram searches. These should be:
+TASK: Create 10-15 natural search queries for "{tier2_name}" that sound like real Instagram searches. These should be:
 - Short, hashtag-friendly phrases
-- Visual and design-focused
+- Visual and action-focused
 - Include popular hashtag variations
-- Cover different contexts (tips, inspiration, before/after, etc.)
+- Cover different contexts (highlights, tips, training, gear, etc.)
 - Include quick tips and visual content-focused queries
 
 REQUIREMENTS:
@@ -106,7 +108,7 @@ REQUIREMENTS:
 - Include variations that work well with hashtags
 - Avoid overly technical or academic language
 - Be specific enough to generate targeted results
-- Focus on visual content, quick tips, and home inspiration
+- Focus on visual content, quick tips, and sports inspiration
 
 Return ONLY valid JSON in this exact format:
 
@@ -114,15 +116,15 @@ Return ONLY valid JSON in this exact format:
   "tier1_name": "{tier1_name}",
   "tier2_name": "{tier2_name}",
   "search_seeds": [
-    "home decor",
-    "DIY ideas",
-    "interior design",
-    "home makeover",
-    "decor inspiration"
+    "basketball tips",
+    "sports highlights",
+    "training motivation",
+    "outdoor adventures",
+    "fitness goals"
   ]
 }}
 
-Generate exactly 8-12 search seeds for "{tier2_name}". Return ONLY the JSON, no additional text."""
+Generate exactly 10-15 search seeds for "{tier2_name}". Return ONLY the JSON, no additional text."""
 
 
 def build_tier1_prompt() -> str:
@@ -146,3 +148,4 @@ def build_tier3_prompt(tier1_name: str, tier2_name: str, platform: str = "youtub
         tier1_name=tier1_name,
         tier2_name=tier2_name
     )
+

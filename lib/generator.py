@@ -55,6 +55,66 @@ class DataGenerator:
         sanitized = re.sub(r'[-\s]+', '_', sanitized)
         return sanitized.strip('_').lower()
     
+    async def _invoke_model_with_json_retry(self, prompt: str, max_retries: int = None) -> Dict[str, Any]:
+        """
+        Invoke Bedrock model and parse JSON response with retry logic for JSON parsing errors.
+        
+        This method retries the entire API call if JSON parsing fails, since a new API call
+        may return valid JSON even if the previous one didn't. Bedrock API errors are handled
+        by the Bedrock client's own retry logic.
+        
+        Args:
+            prompt: Input prompt
+            max_retries: Maximum number of retries for JSON parsing errors (defaults to config.max_retries)
+            
+        Returns:
+            Parsed JSON data from the response
+            
+        Raises:
+            BedrockError: If all retries fail
+        """
+        if max_retries is None:
+            max_retries = self.config.max_retries
+        
+        last_error = None
+        for attempt in range(max_retries):
+            try:
+                # Invoke Bedrock model (Bedrock client handles its own API-level retries)
+                response = await self.client.invoke_model(
+                    model_id=self.config.model_id,
+                    prompt=prompt,
+                    temperature=self.config.temperature,
+                    top_p=self.config.top_p,
+                    max_tokens=self.config.max_tokens,
+                    max_retries=self.config.max_retries  # Bedrock API retries
+                )
+                
+                # Parse JSON response
+                data = json.loads(response["content"])
+                return data
+                
+            except json.JSONDecodeError as e:
+                last_error = e
+                logger.warning(f"JSON parsing failed (attempt {attempt + 1}/{max_retries}): {str(e)}")
+                
+                if attempt < max_retries - 1:
+                    # Wait before retry (fixed 5 second delay)
+                    wait_time = 5 ** attempt
+                    logger.info(f"Retrying API call and JSON parsing in {wait_time} seconds...")
+                    await asyncio.sleep(wait_time)
+                else:
+                    logger.error(f"All JSON parsing retry attempts failed: {str(e)}")
+                    raise BedrockError(f"JSON parsing failed after {max_retries} attempts: {str(e)}") from e
+                    
+            except BedrockError as e:
+                # Bedrock API errors are already retried by the client, so re-raise
+                raise
+            except Exception as e:
+                # For other unexpected errors, don't retry, just raise
+                raise BedrockError(f"Model invocation failed: {str(e)}") from e
+        
+        raise BedrockError(f"JSON parsing failed: {str(last_error)}") from last_error
+    
     async def generate_all_data(self) -> Dict[str, Any]:
         """Generate all three tiers of data with checkpointing"""
         logger.info("Starting data generation")
@@ -98,17 +158,8 @@ class DataGenerator:
         prompt = self.prompts.build_tier1_prompt()
         
         try:
-            response = await self.client.invoke_model(
-                model_id=self.config.model_id,
-                prompt=prompt,
-                temperature=self.config.temperature,
-                top_p=self.config.top_p,
-                max_tokens=self.config.max_tokens,
-                max_retries=self.config.max_retries
-            )
-            
-            # Parse JSON response
-            data = json.loads(response["content"])
+            # Invoke model and parse JSON with retry logic
+            data = await self._invoke_model_with_json_retry(prompt)
             tier1_categories = data.get("tier1_categories", [])
             
             # Save to file
@@ -163,17 +214,8 @@ class DataGenerator:
         """Generate Tier 2 items for a specific Tier 1 category"""
         prompt = self.prompts.build_tier2_prompt(tier1_name)
         
-        response = await self.client.invoke_model(
-            model_id=self.config.model_id,
-            prompt=prompt,
-            temperature=self.config.temperature,
-            top_p=self.config.top_p,
-            max_tokens=self.config.max_tokens,
-            max_retries=self.config.max_retries
-        )
-        
-        # Parse JSON response
-        data = json.loads(response["content"])
+        # Invoke model and parse JSON with retry logic
+        data = await self._invoke_model_with_json_retry(prompt)
         tier2_items = data.get("tier2_items", [])
         
         # Add Tier 1 context to each Tier 2 item
@@ -238,17 +280,8 @@ class DataGenerator:
             self.platform
         )
         
-        response = await self.client.invoke_model(
-            model_id=self.config.model_id,
-            prompt=prompt,
-            temperature=self.config.temperature,
-            top_p=self.config.top_p,
-            max_tokens=self.config.max_tokens,
-            max_retries=self.config.max_retries
-        )
-        
-        # Parse JSON response
-        data = json.loads(response["content"])
+        # Invoke model and parse JSON with retry logic
+        data = await self._invoke_model_with_json_retry(prompt)
         seeds = data.get("search_seeds", [])
         
         # Add Tier 1 and Tier 2 context to each seed

@@ -77,13 +77,22 @@ python3 scripts/generate_seeds.py -c health_wellbeing -p instagram
 - `sustainability_activism` - Environmental conservation, social justice
 - `auto_mobility` - Automotive, transportation, vehicle maintenance
 - `luxury_lifestyle` - High-end fashion, fine dining, premium experiences
-- `home_diy_decor` - Home improvement, DIY projects, interior design
-- `travel_experiences` - Travel destinations, tourism, cultural experiences
+- `home_lifestyle` - Home improvement, DIY projects, interior design, organization, cleaning, home tours, gardening, home office, storage, minimalism
+- `travel` - Travel destinations, tourism, cultural experiences
 - `tech_gadgets` - Consumer electronics, gadgets, tech reviews
 - `pets_animals` - Pet care, animal training, wildlife
 - `niche_novelty` - Unique hobbies, collectibles, specialized interests
 - `beauty_personal_care` - Skincare, makeup, grooming, personal care
 - `food` - Home cooking, restaurant reviews, cafes, international cuisines
+- `fashion` - Clothing, accessories, style inspiration, outfit ideas
+- `business_entrepreneurship` - Business advice, startups, side hustles, entrepreneurship
+- `finance` - Personal finance, investing, budgeting, money management
+- `entertainment_comedy` - Comedy, memes, viral content, entertainment
+- `dating_relationships` - Dating advice, relationship tips, communication
+- `sports_outdoors` - Sports, outdoor activities, adventure, fitness activities
+- `music` - Music genres, music production, live performances, music discovery
+- `art_photography` - Photography, digital art, painting, creative content
+- `weddings_events` - Wedding planning, event planning, decor, venues
 
 ### Supported Platforms
 
