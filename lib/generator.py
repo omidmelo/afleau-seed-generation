@@ -13,7 +13,7 @@ import re
 from typing import Dict, Any, List, Optional, Set
 from pathlib import Path
 
-from lib.bedrock_client import BedrockClient, BedrockError
+from lib.base_client import LLMClient, LLMError
 from lib.config import config
 from lib.registry import prompt_registry
 
@@ -23,8 +23,8 @@ logger = logging.getLogger(__name__)
 class DataGenerator:
     """Main service for generating hierarchical data across multiple categories"""
     
-    def __init__(self, bedrock_client: BedrockClient, category: str = "health_wellbeing", platform: str = "youtube"):
-        self.client = bedrock_client
+    def __init__(self, client: LLMClient, category: str = "health_wellbeing", platform: str = "youtube"):
+        self.client = client
         self.category = category
         self.platform = platform
         self.config = config
@@ -54,66 +54,68 @@ class DataGenerator:
         sanitized = re.sub(r'[^\w\s-]', '', name)
         sanitized = re.sub(r'[-\s]+', '_', sanitized)
         return sanitized.strip('_').lower()
+
+    def _normalize_seed_text(self, text: str) -> str:
+        """Normalize seed text before validation/dedup/write."""
+        return text.replace(" & ", " and ")
     
     async def _invoke_model_with_json_retry(self, prompt: str, max_retries: int = None) -> Dict[str, Any]:
         """
-        Invoke Bedrock model and parse JSON response with retry logic for JSON parsing errors.
-        
-        This method retries the entire API call if JSON parsing fails, since a new API call
-        may return valid JSON even if the previous one didn't. Bedrock API errors are handled
-        by the Bedrock client's own retry logic.
-        
+        Invoke the active LLM client and parse the JSON response, retrying on
+        JSON parse failures (a fresh API call may return valid JSON where a
+        previous one did not). Provider-level API errors are retried inside
+        the client itself and surface here as LLMError.
+
         Args:
-            prompt: Input prompt
-            max_retries: Maximum number of retries for JSON parsing errors (defaults to config.max_retries)
-            
+            prompt:      Input prompt
+            max_retries: Max JSON-parse retry attempts (defaults to config.max_retries)
+
         Returns:
-            Parsed JSON data from the response
-            
+            Parsed JSON dict from the model response
+
         Raises:
-            BedrockError: If all retries fail
+            LLMError: If the API call fails or JSON cannot be parsed after all retries
         """
         if max_retries is None:
             max_retries = self.config.max_retries
-        
+
         last_error = None
         for attempt in range(max_retries):
             try:
-                # Invoke Bedrock model (Bedrock client handles its own API-level retries)
+                # Each client handles its own API-level retries internally
                 response = await self.client.invoke_model(
                     model_id=self.config.model_id,
                     prompt=prompt,
                     temperature=self.config.temperature,
                     top_p=self.config.top_p,
                     max_tokens=self.config.max_tokens,
-                    max_retries=self.config.max_retries  # Bedrock API retries
+                    max_retries=self.config.max_retries
                 )
-                
+
                 # Parse JSON response
                 data = json.loads(response["content"])
                 return data
-                
+
             except json.JSONDecodeError as e:
                 last_error = e
                 logger.warning(f"JSON parsing failed (attempt {attempt + 1}/{max_retries}): {str(e)}")
-                
+
                 if attempt < max_retries - 1:
-                    # Wait before retry (fixed 5 second delay)
                     wait_time = 5 ** attempt
                     logger.info(f"Retrying API call and JSON parsing in {wait_time} seconds...")
                     await asyncio.sleep(wait_time)
                 else:
                     logger.error(f"All JSON parsing retry attempts failed: {str(e)}")
-                    raise BedrockError(f"JSON parsing failed after {max_retries} attempts: {str(e)}") from e
-                    
-            except BedrockError as e:
-                # Bedrock API errors are already retried by the client, so re-raise
+                    raise LLMError(f"JSON parsing failed after {max_retries} attempts: {str(e)}") from e
+
+            except LLMError:
+                # Provider errors are already retried inside the client — re-raise as-is
                 raise
             except Exception as e:
-                # For other unexpected errors, don't retry, just raise
-                raise BedrockError(f"Model invocation failed: {str(e)}") from e
-        
-        raise BedrockError(f"JSON parsing failed: {str(last_error)}") from last_error
+                # Unexpected errors: don't retry
+                raise LLMError(f"Model invocation failed: {str(e)}") from e
+
+        raise LLMError(f"JSON parsing failed: {str(last_error)}") from last_error
     
     async def generate_all_data(self) -> Dict[str, Any]:
         """Generate all three tiers of data with checkpointing"""
@@ -170,7 +172,7 @@ class DataGenerator:
             
         except Exception as e:
             logger.error(f"Error generating Tier 1: {e}")
-            raise BedrockError(f"Tier 1 generation failed: {e}") from e
+            raise LLMError(f"Tier 1 generation failed: {e}") from e
     
     async def generate_tier2(self) -> List[Dict[str, Any]]:
         """Generate Tier 2 items for each Tier 1 category"""
@@ -300,7 +302,7 @@ class DataGenerator:
         filtered_seeds = []
         
         for seed in seeds:
-            seed_text = seed.get("seed_text", "").strip()
+            seed_text = self._normalize_seed_text(seed.get("seed_text", "").strip())
             
             # Length validation
             if len(seed_text) < self.config.min_seed_length or len(seed_text) > self.config.max_seed_length:
@@ -316,7 +318,9 @@ class DataGenerator:
                 continue
             
             self.seed_hashes.add(seed_hash)
-            filtered_seeds.append(seed)
+            normalized_seed = dict(seed)
+            normalized_seed["seed_text"] = seed_text
+            filtered_seeds.append(normalized_seed)
         
         return filtered_seeds
     

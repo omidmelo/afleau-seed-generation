@@ -11,13 +11,18 @@ class DataGenerationConfig:
     """Configuration for data generation across multiple categories"""
     # Category settings
     category: str = "health_wellbeing"  # Default category for backward compatibility
-    
+
     # Platform settings
     platform: str = "youtube"  # Default platform: 'youtube' or 'instagram'
-    
+
     # Bedrock settings
     region: str = "us-east-1"
-    model_id: str = "amazon.nova-micro-v1:0"
+
+    # Model settings — model IDs are unique across providers, so a single field suffices
+    # model_id: str = "amazon.nova-micro-v1:0"
+    model_id: str = "us.anthropic.claude-sonnet-4-6"
+
+    # Shared inference settings
     temperature: float = 0.1
     top_p: float = 0.9
     max_tokens: int = 4000
@@ -44,6 +49,18 @@ class DataGenerationConfig:
         """Get the Tier 1 filename for the current category"""
         return f"tier1_{self.category}.json"
     
+    @staticmethod
+    def detect_provider(model_id: str) -> str:
+        """
+        Infer the LLM provider from the model ID.
+
+        Model ID conventions:
+          Bedrock     — "vendor.model:version"
+                         e.g. amazon.nova-micro-v1:0
+                              us.anthropic.claude-sonnet-4-6
+        """
+        return "bedrock"
+
     @staticmethod
     def is_valid_platform(platform: str) -> bool:
         """Check if platform is valid"""

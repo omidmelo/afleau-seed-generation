@@ -33,7 +33,7 @@ def test_config():
         from lib.config import config
         
         # Check required config values
-        assert config.model_id == "amazon.nova-micro-v1:0"
+        assert config.model_id in ["amazon.nova-micro-v1:0", "us.anthropic.claude-sonnet-4-6"]
         assert config.region == "us-east-1"
         assert config.max_retries > 0
         assert config.max_seed_length > 0

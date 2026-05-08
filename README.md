@@ -1,6 +1,6 @@
 # Multi-Category Data Generation
 
-This project generates hierarchical structured data for multiple domains using AWS Bedrock's `amazon.nova-micro-v1:0` model. The system supports various categories including Health & Wellbeing, Technology, Gaming, Travel, and many more.
+This project generates hierarchical structured data for multiple domains using LLM. The system supports various categories including Health & Wellbeing, Technology, Gaming, Travel, and many more.
 
 ## Overview
 

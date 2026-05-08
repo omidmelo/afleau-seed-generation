@@ -3,19 +3,20 @@ Prompt templates for Beauty & Personal Care data generation
 Each prompt enforces strict JSON output with validation
 """
 
-# Tier 1 Prompt Template
-TIER_1_PROMPT = """You are an expert in Beauty & Personal Care domains. Generate a comprehensive list of broad categories that cover the entire spectrum of beauty, skincare, grooming, and personal care topics.
 
-TASK: Create 20-25 broad Tier 1 categories for Beauty & Personal Care that are:
-- Comprehensive and cover major beauty/personal care areas
-- Mutually exclusive (minimal overlap)
-- Broad enough to contain multiple sub-topics
-- Relevant to general audience seeking beauty/personal care information
+# Tier 1 Prompt Template
+TIER_1_PROMPT = """You are an expert in influencer marketing and creator discovery within the Beauty & Personal Care space. Your goal is to identify the broad content categories that beauty and personal care creators and influencers produce content in.
+
+TASK: Generate 10-12 broad Tier 1 categories that cover the full spectrum of Beauty & Personal Care creator content. These categories should:
+- Reflect the major niches that beauty and personal care influencers operate in
+- Be broad enough to contain multiple distinct sub-niches and content types
+- Be mutually exclusive with minimal overlap
+- Cover both mainstream and emerging creator communities
 
 REQUIREMENTS:
-- Each category should have a clear, descriptive name
+- Each category should have a clear, recognizable name used in the creator community
 - Avoid overly technical or academic terminology
-- Focus on accessible, practical beauty/personal care categories
+- Think from the perspective of a brand marketer looking to discover creators across different beauty and personal care niches
 
 Return ONLY valid JSON in this exact format:
 
@@ -27,52 +28,54 @@ Return ONLY valid JSON in this exact format:
   ]
 }
 
-Generate exactly 20-25 categories. Return ONLY the JSON, no additional text."""
+Generate exactly 10-12 categories. Return ONLY the JSON, no additional text."""
+
 
 # Tier 2 Prompt Template
-TIER_2_PROMPT = """You are an expert in Beauty & Personal Care domains. Generate specific practices, sub-topics, or areas within the given Tier 1 category.
+TIER_2_PROMPT = """You are an expert in influencer marketing and creator discovery within the Beauty & Personal Care space. Your goal is to identify specific content niches and sub-topics that creators produce content around within a given category.
 
-TASK: Create 12-15 specific Tier 2 items for the category "{tier1_name}" that are:
-- Specific practices, methods, or sub-areas within the category
-- Popular and commonly searched topics
-- Accessible to general audience
-- Distinct from each other (minimal overlap)
+TASK: Generate 6-10 specific Tier 2 sub-niches for the category "{tier1_name}" that are:
+- Specific enough to represent a distinct creator niche or content focus
+- Popular and widely searched on YouTube and Instagram
+- Broad enough that multiple creators actively produce content in that space
+- Distinct from each other with minimal overlap
 
 REQUIREMENTS:
-- Each item should be a specific practice or topic area
+- Each item should represent a real, recognizable content niche within the creator community
+- Think about the types of content that beauty influencers and creators actually produce within "{tier1_name}"
+- Include both mainstream and niche sub-categories to ensure diverse creator discovery
 - Avoid overly technical or academic terminology
-- Focus on actionable, practical beauty/personal care topics
 
 Return ONLY valid JSON in this exact format:
 
 {{
   "tier1_name": "{tier1_name}",
   "tier2_items": [
-    "Daily Skincare",
-    "Anti-Aging",
-    "Acne Treatment"
+    "Daily Skincare Routines",
+    "Anti-Aging Skincare",
+    "Acne & Blemish Care"
   ]
 }}
 
-Generate exactly 12-15 items for "{tier1_name}". Return ONLY the JSON, no additional text."""
+Generate exactly 6-10 items for "{tier1_name}". Return ONLY the JSON, no additional text."""
 
-# Tier 3 Prompt Template
+
 # Tier 3 Prompt Template - YouTube
-TIER_3_YOUTUBE_PROMPT = """You are an expert in Beauty & Personal Care content creation. Generate natural YouTube-style search queries (seeds) for the given Tier 2 practice.
+TIER_3_YOUTUBE_PROMPT = """You are an expert in influencer marketing and creator discovery. Your goal is to generate YouTube search queries that surface content produced by beauty and personal care creators and influencers — not generic informational content, but the kind of content that real beauty creators actually publish on YouTube.
 
-TASK: Create 15-20 natural search queries for "{tier2_name}" that sound like real YouTube searches. These should be:
-- Natural, conversational search phrases
-- Varied in specificity and approach
-- Include different skin types and concerns
-- Cover different contexts (beginner, advanced, budget, luxury, etc.)
-- Include time-based variations (5 min, 10 min, 30 min, etc.)
+TASK: Generate 15-20 YouTube search queries for "{tier2_name}" within the broader "{tier1_name}" category. These queries should:
+- Reflect the content formats and styles that beauty influencers produce on YouTube (e.g., tutorials, Get Ready With Me, hauls, product reviews, comparisons, transformations, routines, unboxings)
+- Surface creator-made content rather than generic informational, medical, or brand/retailer results
+- Cover a diverse range of creators across: skin tones and hair types, age groups, price points (budget drugstore to high-end luxury), and beauty philosophies (clean beauty, minimalist, full glam, etc.)
+- Include varied content angles (beginner vs. experienced, everyday vs. special occasion, honest reviews vs. aspirational)
 
 REQUIREMENTS:
 - Each query should be 3-8 words long
-- Sound like real user searches on YouTube
-- Include variations in difficulty, duration, and context
-- Avoid overly technical or academic language
-- Be specific enough to generate targeted results
+- Queries should read like real YouTube searches that surface individual creator content, not medical advice or retail pages
+- Include format-specific signals such as: "routine", "tutorial", "review", "haul", "transformation", "get ready with me", "testing", "worth it"
+- Ensure the full set of queries reflects diversity in demographics, price points, and creator styles
+
+SAFETY: Exclude queries that could surface dangerous DIY cosmetic procedures, eating disorder-adjacent content, harmful skin treatments, or misleading medical claims framed as beauty advice.
 
 Return ONLY valid JSON in this exact format:
 
@@ -80,33 +83,34 @@ Return ONLY valid JSON in this exact format:
   "tier1_name": "{tier1_name}",
   "tier2_name": "{tier2_name}",
   "search_seeds": [
-    "skincare routine for beginners",
-    "makeup tips for oily skin",
-    "hair care for damaged hair",
-    "beauty products review",
-    "natural beauty remedies"
+    "morning skincare routine for beginners",
+    "get ready with me dewy skin",
+    "drugstore skincare routine oily skin",
+    "testing viral skincare products",
+    "affordable skincare routine dark skin"
   ]
 }}
 
-Generate exactly 15-20 search seeds for "{tier2_name}". Return ONLY the JSON, no additional text."""
+Generate exactly 15-20 search seeds for "{tier2_name}" within "{tier1_name}". Return ONLY the JSON, no additional text."""
+
 
 # Tier 3 Prompt Template - Instagram
-TIER_3_INSTAGRAM_PROMPT = """You are an expert in Beauty & Personal Care content creation. Generate natural Instagram-style search queries (seeds) for the given Tier 2 practice.
+TIER_3_INSTAGRAM_PROMPT = """You are an expert in influencer marketing and creator discovery. Your goal is to generate Instagram search queries that surface content produced by beauty and personal care creators and influencers — focusing on the visual, short-form content formats that beauty creators actually publish on Instagram.
 
-TASK: Create 15-20 natural search queries for "{tier2_name}" that sound like real Instagram searches. These should be:
-- Short, hashtag-friendly phrases
-- Visual and beauty-focused
-- Include popular hashtag variations
-- Cover different contexts (tips, inspiration, routines, etc.)
-- Include quick tips and visual content-focused queries
+TASK: Generate 15-20 Instagram search queries for "{tier2_name}" within the broader "{tier1_name}" category. These queries should:
+- Reflect the content formats and styles that beauty influencers produce on Instagram (e.g., aesthetic reels, quick tips, before/after transformations, product showcases, Get Ready With Me clips, routine snapshots, trending audio formats)
+- Surface creator-made content rather than brand campaigns or retailer posts
+- Cover a diverse range of creators across: skin tones and hair types, age groups, price points (budget drugstore to high-end luxury), and beauty philosophies (clean beauty, minimalist, full glam, etc.)
+- Include varied content styles (aspirational/aesthetic, educational quick tips, honest reviews, community-driven)
 
 REQUIREMENTS:
 - Each query should be 2-6 words long
-- Sound like real user searches on Instagram
-- Include variations that work well with hashtags
-- Avoid overly technical or academic language
-- Be specific enough to generate targeted results
-- Focus on visual content, quick tips, and beauty inspiration
+- Queries should read like real Instagram searches that surface individual creator content
+- Include format-specific signals such as: "routine", "tips", "transformation", "review", "aesthetic", "tutorial", "look", "haul"
+- Ensure the full set of queries reflects diversity in demographics, price points, and creator styles
+- Focus on visual and lifestyle-oriented angles that are native to Instagram's content culture
+
+SAFETY: Exclude queries that could surface dangerous DIY cosmetic procedures, eating disorder-adjacent content, harmful skin treatments, or misleading medical claims framed as beauty advice.
 
 Return ONLY valid JSON in this exact format:
 
@@ -114,15 +118,15 @@ Return ONLY valid JSON in this exact format:
   "tier1_name": "{tier1_name}",
   "tier2_name": "{tier2_name}",
   "search_seeds": [
-    "skincare tips",
-    "makeup inspiration",
-    "hair care routine",
-    "beauty hacks",
-    "glow up tips"
+    "morning skincare routine",
+    "dewy skin transformation",
+    "drugstore makeup look",
+    "clean beauty tips",
+    "affordable skincare dark skin"
   ]
 }}
 
-Generate exactly 15-20 search seeds for "{tier2_name}". Return ONLY the JSON, no additional text."""
+Generate exactly 15-20 search seeds for "{tier2_name}" within "{tier1_name}". Return ONLY the JSON, no additional text."""
 
 
 def build_tier1_prompt() -> str:
@@ -141,7 +145,7 @@ def build_tier3_prompt(tier1_name: str, tier2_name: str, platform: str = "youtub
         prompt_template = TIER_3_INSTAGRAM_PROMPT
     else:
         prompt_template = TIER_3_YOUTUBE_PROMPT
-    
+
     return prompt_template.format(
         tier1_name=tier1_name,
         tier2_name=tier2_name
